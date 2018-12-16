@@ -1,14 +1,3 @@
-// const notes = ['Note1', 'Note2', 'Note3','Note4']
-// let value = notes[1]
-// console.log(`The value @index 1 contains the number ${value}`)
-
-
-// console.log(notes.length - 1)
-
-
-// const notesCheck = notes.indexOf('Note1')
-// console.log(notesCheck);
-
 const notes = [{
 	title: 'My next trip',
 	body: 'I would like to go to Spain'
@@ -35,17 +24,17 @@ const findNotes = function(notes, query) {
 	})
 }
 
-console.log(findNotes(notes, 'believe'))
+const sortNotes = function (notes) {
+	notes.sort(function (a, b) {
+		if (a.title.toLowerCase() < b.title.toLowerCase()) {
+			return -1
+		} else if(b.title.toLowerCase() < a.title.toLowerCase()) {
+			return 1
+		} else {
+			return 0
+		}
+	})
+}
 
-
-
-
-
-
-// const findNote = (notes, noteTitle) => {
-// 	return notes.find(function (note, index) {
-// 		return note.title.toLowerCase() === noteTitle.toLowerCase()
-// 	})
-// 	const answer = notes
-// 	return answer
-// }
+sortNotes(notes)
+console.log(notes)

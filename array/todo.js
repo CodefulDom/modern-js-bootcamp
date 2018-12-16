@@ -1,16 +1,6 @@
-// const todo = ['Walk the dog', 'call mom', 'wash car', 'finish term paper', 'get new macbook pro']
-
-/*
-	Convert array to array of object
-		- need to have text
-		-	need to have completed
-	Convert function to remove a todo by text value
-		-	use toLowerCase() to negate text case
-*/
-
 const todos = [{
 	text: 'Walk the dog',
-	completed: true
+	completed: false
 }, {
 	text: 'Call Momma before 9pm on Wednesday',
 	completed: true
@@ -19,7 +9,7 @@ const todos = [{
 	completed: true
 },{
 	text: 'Call MacHeadquaters about getting a new macbook pro with 32 gig of ram',
-	completed: true
+	completed: false
 }, {
 	text: 'Put away Laundry',
 	completed: false
@@ -34,10 +24,25 @@ const deleteTodo = function(todos, todoText) {
 	}
 }
 
-const getThingsDone = function(todo) {
+const getThingsDone = function(todo){
 	return todos.filter(function (todos) {
 		return !todos.completed
 	})
 }
+
+const sortTodos = function(todos) {
+	todos.sort(function(a, b) {
+		if(!a.completed && b.completed) {
+			return -1
+		} else if(!b.completed && a.completed) {
+			return 1
+		} else {
+			return 0
+		}
+	})
+}
+
 console.log(getThingsDone(todos));
+sortTodos(todos)
+console.log(sortTodos)
 
