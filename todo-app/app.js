@@ -30,7 +30,7 @@ todos.forEach(function(todo) {
 })
 
 // listen for button click
-document.querySelector('button').addEventListener('click', function () {
+document.querySelector('#new-todo').addEventListener('click', function () {
 	// use event to trigger new <p></p> creation
 	console.log('Todo Added!')
 

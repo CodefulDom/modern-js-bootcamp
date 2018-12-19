@@ -91,3 +91,30 @@ newParagraph.textContent = 'This is a new element from JavaScript'
 document.querySelector('body').appendChild(newParagraph)
 ```
 
+------
+
+## Handling User Interactions
+
+In the video we learned how to handle user interactions. This allows us to respond to things the user does like clicking a button.
+
+### Adding Event Handlers
+
+Adding an event handler allows you to run some JavaScript code when something happens. This would enable you to execute some JavaScript code when a user click a specfic button on the screen.
+
+We add an event handler onto a DOM element using `addEventListener`. The method takes two arguments. The first is where you specify what event you want to watch for. The second is where you specifiy what you want to do when the event happens. 
+
+```javascript
+document.querySelector('button').addEventListener('click', function (event) {
+    event.target.textContent = 'The button was clicked'
+})
+```
+
+The code above does a few things worth taking note of.
+
+1. We select what element we are listening on and what sort of event we are listening for
+2. Then we take the value from that interaction and assign it more text which will change the text on the button.
+
+------
+
+## Advanced Queries
+

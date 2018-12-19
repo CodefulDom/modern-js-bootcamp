@@ -1,4 +1,4 @@
-const notes = [{
+let notes = [{
 	title: 'My next trip',
 	body: 'I would like to go to Spain'
 }, {
@@ -9,6 +9,14 @@ const notes = [{
 	body: 'Do not be the type of person that has to convience other people of your greatness. You should strive everyday to improve, to be better at your craft untill it is undeniable that your greatness can no longer be ignored or doubted'
 }]
 
-document.querySelector('button').addEventListener('click',function (event){
+document.querySelector('#create').addEventListener('click',function (event){
 	event.target.textContent = 'The button was click, mother fucker.'
 } )
+
+document.querySelector('#remove').addEventListener('click', function () {
+	document.querySelectorAll('.note').forEach(function(note){
+		alert('Deleting Your Notes!')
+		note.remove()
+	})
+})
+
