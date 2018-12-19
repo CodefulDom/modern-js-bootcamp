@@ -15,15 +15,6 @@ const todos = [{
 	completed: false
 }]
 
-/*
- todos that need to be completed
- 'You have 2 todos left' p element
-
- add a <p></p> for each todo above(use text in todos)
-
- */
-
-
 const incompleteTodos = todos.filter(function(todo) {
 	return !todo.completed
 })
@@ -38,6 +29,12 @@ todos.forEach(function(todo) {
 	document.querySelector('body').appendChild(paragraph)
 })
 
+// listen for button click
+document.querySelector('button').addEventListener('click', function () {
+	// use event to trigger new <p></p> creation
+	console.log('Todo Added!')
 
+	// return button to original state
+})
 
 
