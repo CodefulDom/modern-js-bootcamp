@@ -118,3 +118,26 @@ The code above does a few things worth taking note of.
 
 ## Advanced Queries
 
+### IDs and Classes
+
+HTML gives you a couple of attributes to make targeting our DOM elements a bit easier. The first is the `id` attribute. The `id` attribute is designed to be a unique identifier for an element. in your document. 
+
+```html
+<h1 id="my-id">
+    My Title
+</h1>
+```
+
+ The second is the class attribute. The class attribute is **not** unique, so you could have many elements in your document with the same class. An element can also have multiple classes by setting a space-separated list of classes.
+
+### Targeting Elements By Id and Class
+
+You can target elements by their id or classes via `querySelector` or `querySelectorAll`. Id's should be prefixed with `#` and classes get `.` As their prefix
+
+```javascript
+document.querySelector('#my-id')
+document.querySelectorAll('.special')
+```
+
+ 
+
