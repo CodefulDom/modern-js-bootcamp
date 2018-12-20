@@ -29,12 +29,13 @@ todos.forEach(function(todo) {
 	document.querySelector('body').appendChild(paragraph)
 })
 
-// listen for button click
-document.querySelector('#new-todo').addEventListener('click', function () {
-	// use event to trigger new <p></p> creation
-	console.log('Todo Added!')
 
-	// return button to original state
+document.querySelector('#new-todo').addEventListener('click', function () {
+	console.log('Todo Added!')
 })
 
+
+document.querySelector('#todo-text').addEventListener('input', function(event) {
+	console.log(event.target.value)
+})
 
