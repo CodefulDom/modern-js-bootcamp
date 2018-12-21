@@ -32,15 +32,20 @@ document.querySelector('#create').addEventListener('click',function (event){
 	event.target.textContent = 'The button was click, mother fucker.'
 } )
 
-document.querySelector('#remove').addEventListener('click', function () {
-	document.querySelectorAll('.note').forEach(function(note){
-		alert('Deleting Your Notes!')
-		note.remove()
-	})
-})
+// document.querySelector('#remove').addEventListener('click', function () {
+// 	document.querySelectorAll('.note').forEach(function(note){
+// 		alert('Deleting Your Notes!')
+// 		note.remove()
+// 	})
+// })
 
 document.querySelector('#search-text').addEventListener('input', function(event) {
 	filters.searchText = event.target.value
 	renderNotes(notes, filters)
 })
 
+document.querySelector('#name-form').addEventListener('submit', function (e) {
+	e.preventDefault()
+	console.log(e.target.elements.firstName.value)
+	e.target.elements.firstName.value = ''
+})
